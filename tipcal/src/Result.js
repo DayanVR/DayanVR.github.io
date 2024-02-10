@@ -14,7 +14,7 @@ const Result = ({tipAmount, totalAmount, handleReset}) => {
             <div>
               <p>Total <br/> 
               <small>/ person</small></p>
-              <p className='tips'>${totalAmount}</p>
+              <p className='tips'>${totalAmount === 'Infinity' ? '0.00' : totalAmount}</p>
             </div>
           </section>
             <button onClick={handleReset}>RESET</button>

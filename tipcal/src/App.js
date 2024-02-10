@@ -21,25 +21,7 @@ function App() {
     setPeople(parseInt(e.target.value));
   };
   
-  const calculateTip = () => {
-    const tipPercent = percentage / 100;
-    let tip = billAmount * tipPercent;
-    let total = tip / people;
-    
-    if(isNaN(tip) || isNaN(total) || total === 0 || tip === 0 || tip == 'Infinity' || total == 'Infinity') {
-      setTipAmount('0.00');
-      setTotalAmount('0.00');
-    } else {
-      setTipAmount(tip.toFixed(2));
-      setTotalAmount(total.toFixed(2));
-    }
-
-    if (people > 0) {
-      setNumPeople(false)
-    } else {
-      setNumPeople(true)
-    }
-  }
+  
   const handleReset = () => { 
     setBillAmount('')
     setPeople('')
@@ -47,7 +29,26 @@ function App() {
    }
 
   useEffect(() => {
-    calculateTip();
+    const calculateTip = () => {
+      const tipPercent = percentage / 100;
+      let tip = billAmount * tipPercent;
+      let total = tip / people;
+      
+      if(isNaN(tip) || isNaN(total) || total === 0 || tip === 0 || tip === 'Infinity'|| total === 'Infinity') {
+        setTipAmount('0.00');
+        setTotalAmount('0.00');
+      } else {
+        setTipAmount(tip.toFixed(2));
+        setTotalAmount(total.toFixed(2));
+      }
+  
+      if (people > 0) {
+        setNumPeople(false)
+      } else {
+        setNumPeople(true)
+      }
+    }
+    calculateTip()
   }, [billAmount, percentage, people])
 
   return (

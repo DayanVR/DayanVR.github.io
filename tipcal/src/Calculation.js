@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import bill from './icon-dollar.svg';
 import peopleIcon from './icon-person.svg'
 
@@ -9,7 +9,7 @@ const Calculation = ({handleTipClick, billAmount, handleBill, people, handlePeop
           <section className='bill-wrapper'>
             <small>Bill</small>
             <input type='number' value={billAmount} onChange={handleBill} className='bill-input'/><br/>
-            <img src={bill} className='bill'/>
+            <img src={bill} className='bill' alt=''/>
           </section>
           <section>
             <small>Select Tip %</small>
@@ -29,7 +29,7 @@ const Calculation = ({handleTipClick, billAmount, handleBill, people, handlePeop
             </div>
             <input style={{marginTop: '7px'}} type='number' value={people} onChange={handlePeople}
             className={numPeople ? 'danger' : ''}/>
-            <img src={peopleIcon} className='peopleIcon'/>
+            <img src={peopleIcon} className='peopleIcon' alt=''/>
           </section>
         </div>
   )
