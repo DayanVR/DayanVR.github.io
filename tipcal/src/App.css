@@ -1,0 +1,304 @@
+.App {
+  text-align: center;
+  background-color: hsl(185, 41%, 84%);
+  padding-top: 10vh;
+  height: 90vh;
+}
+
+header{
+  color: hsl(183, 100%, 15%);
+  font-weight: bold;
+  letter-spacing: 10px;
+  font-size: 24px;
+}
+
+.container{
+  border-radius: 20px;
+  background-color: hsl(0, 0%, 100%);
+  width: 100vh;
+  margin: 3rem auto;
+  padding: 30px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.calc, .result{
+  height: 35vh;
+  width: 40vh;
+}
+
+.calc{
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result{
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  padding: 10px 30px 25px 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 15px;
+}
+small {
+  color: hsl(184, 14%, 56%);
+  font-weight: bold;
+  margin-top: 10px;
+}
+.people{
+  margin-bottom:2px;
+}
+.noZero{
+  display: flex;
+  width: 100%;
+}
+.noZero > small:last-of-type{
+  font-size: 12px;
+  margin-left: auto;
+  color: red;
+}
+.result > button{
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 12px;
+  font-weight: 700;
+  border: none;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+.result > button:hover{
+  background-color: hsl(172, 100%, 85%);
+}
+.amount > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tips{
+  font-size: 24px;
+  font-weight: 700;
+  color: hsl(172, 67%, 45%);
+}
+.tipsPercentage{
+  display: inline-grid;
+  margin: 5px auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5%;
+}
+.tipsPercentage > button, .custom{
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  margin: 5% 0;
+  padding: 10% 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  direction: ltr;
+  background-color: hsl(183, 100%, 15%);
+  color: #fff;
+  cursor: pointer;
+}
+.custom:focus{
+  color: hsl(183, 100%, 15%);
+}
+.tipsPercentage > button:hover {
+background-color: hsl(172, 80%, 65%);
+color: hsl(183, 100%, 15%);
+}
+.active{
+  background-color: hsl(172, 67%, 45%) !important;
+  color: hsl(183, 100%, 15%) !important;
+}
+
+input{
+  direction: rtl;
+  width: 100%;
+  border: none;
+  background-color: hsl(189, 41%, 97%) !important;
+  padding: 5px;
+  font-weight: 700;
+  font-size: 24px;
+  color: hsl(183, 100%, 15%);
+  border-radius: 5px;
+}
+
+.bill-wrapper{
+  position: relative;
+}
+.people-wrapper{
+  position: relative;
+}
+.bill{
+  position: absolute;
+  top: 50%;
+  transform: translateX(130%) translateY(10%);
+}
+.peopleIcon{
+  position: absolute;
+  top: 55%;
+  transform: translateX(130%) translateY(28%);
+}
+.bill-input:focus{
+  border-color: hsl(172, 67%, 45%);
+  
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 1024px) {
+  .calc, .result{
+    height: 85%;
+    width: 45%;
+    margin: 5px 4%;
+  }
+  .container{
+    margin: 3rem auto;
+    width: 80%;
+    height: 45vh;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calc, .result{
+    height: 40vh;
+    width: 100%;
+  }
+  .container{
+    margin: 3rem auto;
+    width: 85%;
+    height: 50vh;
+    align-items: center;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .calc, .result{
+    text-align: left;
+    width: 70%;  
+    height: 30%;
+    margin-top: 3%;
+  }
+  .result{
+    margin-bottom: 5%;
+  }
+  .container{
+    display: flex;
+    width: 65vh;
+    margin: 3vh auto;
+    padding: 0;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;  
+  }
+  .App {
+    text-align: center;
+    background-color: hsl(185, 41%, 84%);
+    padding-top: 2vh;
+    height: 110vh;
+  }
+  .calc > section{
+    margin: 6px auto;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .container{
+    width: 50vh;
+    align-items: center;
+    flex-direction: column;
+    height: 85vh;  
+  }
+  .App{
+    padding-bottom: 10vh;
+    padding-top: 3vh;
+  }
+  .calc, .result{
+    text-align: left;
+    width: 73%;  
+    height: 45%;
+    margin-top: 2vh;
+    margin-bottom: 4vh;
+  }
+  .result{
+    background-color: hsl(183, 100%, 15%);
+    color: white;
+    padding: 5px 20px 20px 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    margin-top: 3vh;
+  }
+  input{
+    width: 100%;
+  }
+  .peopleIcon{
+    top: 57%;
+    transform: translateX(130%) translateY(28%);
+  }
+  .tipsPercentage > button, .custom{
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    margin: 5% 2%;
+    padding: 10% 0;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    direction: ltr;
+    background-color: hsl(183, 100%, 15%);
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .container{
+    width: 40vh;
+    height: 85vh;
+  }
+  .calc, .result{
+    text-align: left;
+    width: 72%;  
+    height: 45%;
+    margin-top: 1vh;
+    margin-bottom: 3vh;
+  }
+  .result{
+    padding: 5px 15px 15px;
+    margin-top: 30px;
+  }
+  .App {
+    padding-bottom: 5vh;
+    padding-top: 2vh;
+  }
+  .peopleIcon{
+    top: 57%;
+    transform: translateX(130%) translateY(28%);
+  }
+  .people-wrapper > div{
+    width: 105%;
+    flex-direction: row;
+    
+  }
+  .noZero > small:last-of-type {
+    font-size: 10px;
+    margin-left: auto;
+    align-self: center;
+}
+.tipsPercentage > button, .custom{
+  font-size: 12px;
+  padding: 10px 0;
+}
+}
+
+.danger{
+  border-color: red;
+}
